@@ -8,14 +8,14 @@ import AppActions from '../../actions/AppActions';
 import AppStore from '../../stores/AppStore';
 import Header from '../Header';
 import ContentPage from '../ContentPage';
-import ContactPage from '../ContactPage';
+import RadioOptionGroup from '../RadioOptionGroup';
 import LoginPage from '../LoginPage';
 import RegisterPage from '../RegisterPage';
 import NotFoundPage from '../NotFoundPage';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
 
-const pages = { ContentPage, ContactPage, LoginPage, RegisterPage, NotFoundPage };
+const pages = { ContentPage, RadioOptionGroup, LoginPage, RegisterPage, NotFoundPage };
 
 @withContext
 @withStyles(styles)
@@ -49,8 +49,8 @@ class App {
         component = React.createElement(pages[page.component], page);
         break;
 
-      case '/contact':
-        component = <ContactPage />;
+      case '/RadioOptionGroup':
+        component = <RadioOptionGroup />;
         break;
 
       case '/login':

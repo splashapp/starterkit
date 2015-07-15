@@ -42,6 +42,7 @@ function run() {
   // Update `Application.path` prop when `window.location` is changed
   Dispatcher.register((action) => {
     if (action.type === ActionTypes.CHANGE_LOCATION) {
+      console.log(action);
       element = React.cloneElement(element, {path: action.path});
       React.render(element, document.getElementById('app'));
     }

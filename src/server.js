@@ -32,7 +32,7 @@ const template = _.template(fs.readFileSync(templateFile, 'utf8'));
 server.get('*', async (req, res, next) => {
   try {
     // TODO: Temporary fix #159
-    if (['/', '/about', '/privacy'].indexOf(req.path) !== -1) {
+    if (['/', '/about', '/privacy', '/RadioOptionGroup'].indexOf(req.path) !== -1) {
       await db.getPage(req.path);
     }
     let notFound = false;
